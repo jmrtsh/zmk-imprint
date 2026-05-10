@@ -51,7 +51,7 @@
                       &kp LGUI  &kp LALT                                                                                &kp LBKT  &kp RBKT
                                           &kp BSPC  &kp DEL            &kp LC(BSPC)                 &mkp LCLK  &mkp RCLK &kp SPACE
                                           // because of the hardware problem with the leftmost lower left thumb key, the left thumb lower assignments are all "bit-rotated" left by one, i.e. rightmost physical key does &none
-                                          &none     &nav_sticky_shift NAV LSHFT  &mo SYMBOLS                  &caps_word &mo MAGIC &kp ENTER
+                                          &none     &nav_sticky_shift NAV LSHFT  &mo SYMBOLS        &caps_word &mo MAGIC &kp ENTER
             >;
         };
 
