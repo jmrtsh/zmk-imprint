@@ -100,9 +100,9 @@
         Layer_4_UMLAUT {
             bindings = <
  &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans
- &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans
+ &trans   &trans   &trans   &trans   &trans   &kp RA(N5)                                                        &trans   &trans   &trans   &trans   &trans   &trans
  &trans   &kp RA(Q)&kp RA(Y)&kp RA(P)&kp RA(S)&trans                                                            &trans   &trans   &trans   &trans   &trans   &trans
- &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans
+ &trans   &trans   &kp RA(S)&trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans
  &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans
                    &trans   &trans                                                                                                &trans   &trans                  
                                                      &trans   &trans   &trans      &trans   &trans   &trans
