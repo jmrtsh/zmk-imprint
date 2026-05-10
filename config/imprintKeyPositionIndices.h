@@ -1,4 +1,5 @@
-// TODO this is slightly wrong, for the thumbs at least, I'm pretty sure
+// These indices match the `imprint_function_row` matrix transform selected in
+// config/imprint.keymap.
 
 /*                          CYBOARD IMPRINT KEY MATRIX / LAYOUT MAPPING
  ╭────────────────────────────────────╮       ╭────────────────────────────────────╮
@@ -7,10 +8,10 @@
  │ 24  25  26  27  28  29             │       │             30  31  32  33  34  35 │
  │ 36  37  38  39  40  41             │       │             42  43  44  45  46  47 │
  │ 48  49  50  51  52  53             │       │             54  55  56  57  58  59 │
- │ 60  61  62  63  64                 │       │                 65  66  67  68  69 │
+ │         60  61                     │       │                     62  63         │
  ╰───────────────────────┬────────────╯       ╰────────────┬───────────────────────╯
-                         │ 70  71  72           76  77  78 │       
-                         │ 73  74  75           79  80  81 │       
+                         │ 64  65  66           67  68  69 │
+                         │ 70  71  72           73  74  75 │
                          ╰─────────────       ─────────────╯
 
  ╭────────────────────────────────────╮       ╭────────────────────────────────────╮
@@ -19,7 +20,7 @@
  │ LT5 LT4 LT3 LT2 LT1 LT0            │       │            RT0 RT1 RT2 RT3 RT4 RT5 │
  │ LM5 LM4 LM3 LM2 LM1 LM0            │       │            RM0 RM1 RM2 RM3 RM4 RM5 │
  │ LB5 LB4 LB3 LB2 LB1 LB0            │       │            RB0 RB1 RB2 RB3 RB4 RB5 │
- │ LF5 LF4 LF3 LF2 LF1                │       │                RF1 RF2 RF3 RF4 RF5 │
+ │         LF3 LF2                    │       │                    RF2 RF3         │
  ╰──────────────────────┬─────────────╯       ╰─────────────┬──────────────────────╯
                         │ LH2 LH1 LH0                 RH0 RH1 RH2 │
                         │ LH5 LH4 LH3                 RH3 RH4 RH5 │
@@ -108,55 +109,49 @@
 #define RB4 58
 #define RB5 59
 
-// Left floor row (no LF0 - innermost key doesn't exist)
-#define LF1 64
-#define LF2 63
-#define LF3 62
-#define LF4 61
-#define LF5 60
+// Left floor row for imprint_function_row (LF5, LF4, and LF1 are not in this transform)
+#define LF2 61
+#define LF3 60
 
-// Right floor row (no RF0 - innermost key doesn't exist)
-#define RF1 65
-#define RF2 66
-#define RF3 67
-#define RF4 68
-#define RF5 69
+// Right floor row for imprint_function_row (RF1, RF4, and RF5 are not in this transform)
+#define RF2 62
+#define RF3 63
 
 // Left thumb keys
-#define LH0 72  // inner top
-#define LH1 71  // middle top
-#define LH2 70  // outer top
-#define LH3 75  // inner bottom
-#define LH4 74  // middle bottom
-#define LH5 73  // outer bottom
+#define LH0 66  // inner top
+#define LH1 65  // middle top
+#define LH2 64  // outer top
+#define LH3 72  // inner bottom
+#define LH4 71  // middle bottom
+#define LH5 70  // outer bottom
 
 // Right thumb keys
-#define RH0 76  // inner top
-#define RH1 77  // middle top
-#define RH2 78  // outer top
-#define RH3 79  // inner bottom
-#define RH4 80  // middle bottom
-#define RH5 81  // outer bottom
+#define RH0 67  // inner top
+#define RH1 68  // middle top
+#define RH2 69  // outer top
+#define RH3 73  // inner bottom
+#define RH4 74  // middle bottom
+#define RH5 75  // outer bottom
 
 // Groups
-#define KEYS_MAIN_L LC5 LC4 LC3 LC2 LC1     \
+#define KEYS_MAIN_L LC5 LC4 LC3 LC2 LC1 LC0 \
                     LN5 LN4 LN3 LN2 LN1 LN0 \
                     LT5 LT4 LT3 LT2 LT1 LT0 \
                     LM5 LM4 LM3 LM2 LM1 LM0 \
                     LB5 LB4 LB3 LB2 LB1 LB0 \
-                    LF5 LF4 LF3 LF2 LF1
+                    LF3 LF2
 
 #define KEYS_THUMBS_L LH5 LH4 LH3 \
                       LH2 LH1 LH0
 
 #define KEYS_ALL_L KEYS_MAIN_L KEYS_THUMBS_L
 
-#define KEYS_MAIN_R RC1 RC2 RC3 RC4 RC5 \
+#define KEYS_MAIN_R RC0 RC1 RC2 RC3 RC4 RC5 \
                     RN0 RN1 RN2 RN3 RN4 RN5 \
                     RT0 RT1 RT2 RT3 RT4 RT5 \
                     RM0 RM1 RM2 RM3 RM4 RM5 \
                     RB0 RB1 RB2 RB3 RB4 RB5 \
-                    RF1 RF2 RF3 RF4 RF5
+                    RF2 RF3
 
 #define KEYS_THUMBS_R RH3 RH4 RH5 \
                       RH0 RH1 RH2
