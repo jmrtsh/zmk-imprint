@@ -118,14 +118,15 @@
 &trackball_peripheral_listener {
     input-processors =
         //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,//this gets it to the default installation orientation
-        <&zip_xy_scaler 1 7>;//multiply sensitivity by 1, divide by 40 (make it slower for precise pointing, then do software mouse acceleration independently)
+        <&zip_xy_scaler 1 3>;//multiply sensitivity by 1, divide by 3 (make it slower for precise pointing, then do software mouse acceleration independently)
         /*<&zip_temp_layer 3 500>;//activate layer 3 within 500ms of the trackball moving*/
 };
 //left hand trackball overrides
 &trackball_central_listener {
     input-processors =
-        <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,//this gets it to the default installation orientation
+        // somehow this keeps changing
+        /*<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,//this gets it to the default installation orientation*/
         <&zip_xy_scaler 1 40>,//multiply sensitivity by 1, divide by 40 (make it slower for scrolling)
-        <&zip_xy_to_scroll_mapper>,//make this trackball output scrolling events by default instead of cursor movement
-        <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;//invert vertical scrolling so that the view moves in the same direction as the top of the trackball.
+        <&zip_xy_to_scroll_mapper>;//make this trackball output scrolling events by default instead of cursor movement
+        /*<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;//invert vertical scrolling so that the view moves in the same direction as the top of the trackball.*/
 };
