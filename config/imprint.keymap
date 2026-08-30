@@ -140,6 +140,6 @@
         // somehow this keeps changing
         /*<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,//this gets it to the default installation orientation*/
         <&zip_xy_scaler 1 40>,//multiply sensitivity by 1, divide by 40 (make it slower for scrolling)
-        <&zip_xy_to_scroll_mapper>;//make this trackball output scrolling events by default instead of cursor movement
-        /*<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;//invert vertical scrolling so that the view moves in the same direction as the top of the trackball.*/
+        <&zip_xy_to_scroll_mapper>,//make this trackball output scrolling events by default instead of cursor movement
+        <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;//invert vertical scrolling so that the view moves in the same direction as the top of the trackball.
 };
