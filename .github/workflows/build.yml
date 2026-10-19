@@ -53,7 +53,7 @@ jobs:
       - name: Inject shared zmk-stuff context for West
         run: |
           # 1. Copy all files from the parent (zmk-stuff) into config/shared/
-          mkdir config/shared \;
+          mkdir config/shared
           find .. -maxdepth 1 -type f -exec cp {} config/shared/ \;
 
       - name: Create build directory
