@@ -60,11 +60,11 @@
         Layer_1_NAV {
             // instead of letting the &trans do HRMs, just hardcode HRMS without tap behavior, so they work more reliably
             bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &trans          &trans           &trans       &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &trans          &trans           &trans       &trans             &trans
   &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &kp    LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))&kp LC(LS(RIGHT))  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &kp    HOME     &kp    END       &trans       &trans  &trans
-  &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans               &kp    LEFT &kp    DOWN     &kp    UP        &kp    RIGHT &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &kp    PG_DN    &kp    PG_UP     &trans       &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &kp    HOME     &kp    END       &trans       &trans             &trans
+  &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans               &kp    LEFT &kp    DOWN     &kp    UP        &kp    RIGHT &trans             &trans
+  &trans  &trans  &trans  &trans  &trans  &trans                         &trans      &kp    PG_DN    &kp    PG_UP     &trans       &trans             &trans
 
                   &trans  &trans                                                                     &trans           &trans
                                  &trans  &kp C_BRI_DEC &kp C_BRI_INC  &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
